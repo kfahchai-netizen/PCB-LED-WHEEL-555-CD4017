@@ -4,7 +4,7 @@ GND, VCC = "GND", "VCC"
 # ref: (lib_id, value, footprint, (x, y), rot, mirror_y, {pin: net})
 PARTS = {
     # ---- power input ----
-    "J1": ("Connector:Screw_Terminal_01x02", "VIN 5-12V", "TerminalBlock:TerminalBlock_bornier-2_P5.08mm",
+    "J1": ("Connector:Screw_Terminal_01x02", "VIN 5-12V", "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal",
            (25.4, 45.72), 0, True, {"1": "VIN", "2": GND}),
     "D11": ("Device:D_Schottky", "1N5817", "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal",
             (48.26, 45.72), 180, False, {"2": "VIN", "1": VCC}),

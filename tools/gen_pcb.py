@@ -17,7 +17,7 @@ PLACE = {
     "C1": (-7.0, 11.0, 0), "C2": (-17.5, -8.0, 90), "C5": (-12.5, -15.0, 0),
     "C4": (3.0, -13.0, 0), "R3": (15.0, 4.0, 90), "C3": (14.0, -12.0, 0),
     "D12": (-9.0, -19.0, 0), "R4": (-3.0, -19.0, 0),
-    "J1": (-2.54, 19.5, 0), "D11": (14.16, 13.5, 180),
+    "J1": (-2.54, 20.5, 0), "D11": (14.16, 12.5, 180),
 }
 R_LED_K = 32.27                # cathode pad radius; anode pad sits 2.54 mm further in
 for i in range(10):
@@ -76,8 +76,8 @@ def text(s, x, y, size=1.2, layer=pcbnew.F_SilkS, bold=False, angle=0):
     board.Add(t)
 text("LED WHEEL", 0, -24.2, 1.6, bold=True)
 text("SPEED", -15.0, 19.3, 1.0)
-text("+", -6.9, 19.5, 1.6, bold=True); text("-", 6.9, 19.5, 1.6, bold=True)
-text("5-12V", 0, 24.6, 1.0)
+text("+", -6.7, 20.5, 1.6, bold=True); text("-", 6.7, 20.5, 1.6, bold=True)
+text("5-12V", 0, 26.6, 1.0)
 text("LED WHEEL v1.0", 0, -26.6, 1.3, pcbnew.B_SilkS, bold=True)
 text("Kean Fah Chai", 0, -24.4, 1.2, pcbnew.B_SilkS, bold=True)
 text("Swinburne Sarawak 2026", 0, -22.3, 0.9, pcbnew.B_SilkS)
