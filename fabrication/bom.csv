@@ -1,0 +1,15 @@
+Qty,References,Value,Footprint
+1,C1,4.7uF,CP_Radial_D5.0mm_P2.00mm
+1,C2,10nF,C_Disc_D5.0mm_W2.5mm_P5.00mm
+1,C3,100uF,CP_Radial_D6.3mm_P2.50mm
+2,C4 C5,100nF,C_Disc_D5.0mm_W2.5mm_P5.00mm
+10,D1 D2 D3 D4 D5 D6 D7 D8 D9 D10,Red,LED_D5.0mm
+1,D11,1N5817,D_DO-41_SOD81_P10.16mm_Horizontal
+1,D12,Green CLK,LED_D3.0mm
+1,J1,VIN 5-12V,TerminalBlock_bornier-2_P5.08mm
+2,R1 R4,1k,R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal
+1,R2,10k,R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal
+1,R3,470,R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal
+1,RV1,100k SPEED,Potentiometer_Bourns_3386P_Vertical
+1,U1,NE555P,DIP-8_W7.62mm
+1,U2,CD4017B,DIP-16_W7.62mm
