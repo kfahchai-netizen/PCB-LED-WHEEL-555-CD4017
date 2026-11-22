@@ -84,7 +84,7 @@ text("LED WHEEL v1.0", 0, -26.6, 1.3, pcbnew.B_SilkS, bold=True)
 text("Kean Fah Chai", 0, -24.4, 1.2, pcbnew.B_SilkS, bold=True)
 text("Swinburne Sarawak 2026", 0, -22.3, 0.9, pcbnew.B_SilkS)
 text("NE555 + CD4017 LED chaser", 0, 23.6, 0.9, pcbnew.B_SilkS)
-text("github.com/kfahchai-netizen", 0, 25.6, 0.8, pcbnew.B_SilkS)
+text("github.com/kfahchai", 0, 25.6, 0.8, pcbnew.B_SilkS)
 
 out = f"{PROJ}/{NAME}.kicad_pcb"
 board.Save(out)
