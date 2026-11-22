@@ -10,8 +10,9 @@ for t in list(b.GetTracks()):
 for z in list(b.Zones()):
     b.Remove(z)
 
-widths = {"VCC": 0.7, "VIN": 0.7, "GND": 0.7}
-order = ["VIN", "VCC", "CLK"] + [f"Q{i}" for i in range(10)] + ["LEDK", "THR", "DIS", "POT", "CV", "CLKLED", "GND"]
+K = lambda n: n if n in ("GND", "VCC") else "/" + n          # KiCad net naming for label nets
+widths = {"VCC": 0.7, "/VIN": 0.7, "GND": 0.7}
+order = [K(n) for n in ["VIN", "VCC", "CLK"] + [f"Q{i}" for i in range(10)] + ["LEDK", "THR", "DIS", "POT", "CV", "CLKLED", "GND"]]
 r = Router(b, grid=0.2, clearance=0.3, widths=widths, via_cost=5.0, bend_cost=0.5)
 t0 = time.time()
 ok = r.route_all(order)

@@ -2,7 +2,7 @@
 import sys, json, math
 sys.path.insert(0, __import__("os").path.dirname(__import__("os").path.abspath(__file__)))
 import pcbnew
-from design import PARTS
+from design import PARTS, POWER_NETS
 PROJ, NAME = sys.argv[1], sys.argv[2]
 FPL = "/usr/share/kicad/footprints/"
 mm = pcbnew.FromMM
@@ -29,6 +29,8 @@ for i, th in enumerate((-36, 36, 144, 216)):
 board = pcbnew.BOARD()
 nets = {}
 def net(name):
+    # KiCad names nets from local labels with the sheet path ("/THR"); power symbols stay global ("GND")
+    name = name if name in POWER_NETS else "/" + name
     if name not in nets:
         n = pcbnew.NETINFO_ITEM(board, name); board.Add(n); nets[name] = n
     return nets[name]
