@@ -25,9 +25,14 @@
 | **Speed** | Trimmer RV1 sets about **1.4 Hz to 14.6 Hz** (steps per second) |
 | **Power** | 5–12 V DC (a 9 V battery is ideal) through a screw terminal, with reverse-polarity protection |
 | **Board** | Ø 80 mm round, 2 layers, all through-hole, GND pour on both sides, 4 × M3 mounting holes |
-| **Status** | Rev 1.0: design complete, ERC netlist verified, **DRC clean**, Gerbers ready. *Not yet fabricated.* |
+| **Status** | Rev 1.0: design complete, opened and checked in **KiCad 10**: ERC 0 errors, DRC 0 errors, 0 unconnected, PCB ↔ schematic in parity. Gerbers ready. *Not yet fabricated.* |
 
 ## 🖼️ Board
+
+<p align="center">
+  <img src="docs/images/pcb_3d_kicad.png" width="70%" alt="KiCad 10 3D view of the LED Wheel">
+  <br><sub>3D view in KiCad 10 (exported from the 3D viewer)</sub>
+</p>
 
 <p align="center">
   <img src="docs/images/pcb_front_back.png" width="95%" alt="Front and back renders of the PCB">
@@ -95,6 +100,7 @@ Full-resolution PDF: [`docs/led_chaser_schematic.pdf`](docs/led_chaser_schematic
 - The schematic netlist exported by `kicad-cli` is compared with the design description: **all 20 nets match**.
 - Every PCB footprint is linked to its schematic symbol (29/29), so *Update PCB from Schematic* works.
 - KiCad DRC shows **0 clearance errors and 0 unconnected pads**.
+- Opened in **KiCad 10**: ERC 0 errors, DRC 0 errors. The only warnings are KiCad 7 vs KiCad 10 library versions. KiCad 10's checks also caught two issues that were fixed: a screw-terminal footprint removed from the KiCad 10 library, and net names that didn't match KiCad's `/LABEL` naming.
 
 ## ⚙️ Design as code
 
